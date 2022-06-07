@@ -10,7 +10,7 @@ from django.shortcuts import render
 def index(request):
     index_template = loader.get_template('food/index.html')
     context = {
-        
+    #context
     }
 
     return HttpResponse(index_template.render(context, request))
