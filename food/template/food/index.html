@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -9,6 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hi</h1>
+    <h3>
+    {%for item in items_%}
+      {{item.id}} <a href="{{ item.id }}">{{item.item_name}}</a> <br>
+    {%endfor%}
+    </h3>
 </body>
 </html>
