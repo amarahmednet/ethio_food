@@ -1,17 +1,19 @@
-{% load static %}
-<!DOCTYPE html>
-<head>
-    <!-- <link rel="stylesheet" href="{% static 'food/css/style.css' %}"> -->
-    <link rel="stylesheet" href="{% static 'food/css/bootstrap.css' %}">
-    <title>Document</title>
-</head>
-<body>
-  
-    {%for item in items_%}
-      {{item.id}} <a id="as" href="{% url 'food:detail' item.id %}">{{item.item_name}}</a> <br>
-    {%endfor%}
-    
-    
-</body>
-<script src="{% static 'food/js/bootstrap.js' %}"></script>
-</html>
+<!-- {% load static %} -->
+{%extends 'food/base.html'%}
+
+      <!-- <link rel="stylesheet" href="{% static 'food/css/bootstrap.css' %}"> -->
+
+
+{% block body %}
+
+    <h6>
+      {%for item in items_%}
+        {{item.id}} <a id="as" href="{% url 'food:detail' item.id %}" class="bi-alarm">{{item.item_name}}</a>
+
+      {%endfor%}
+    </h6>
+
+{% endblock %}
+
+
+<!-- <script src="{% static 'food/js/bootstrap.js' %}"></script> -->
