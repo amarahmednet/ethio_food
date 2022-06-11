@@ -11,6 +11,3 @@ class item(models.Model):
     item_name = models.CharField(max_length=200)
     item_discription = models.CharField(max_length=200)
     item_number = models.IntegerField()
-
-
-

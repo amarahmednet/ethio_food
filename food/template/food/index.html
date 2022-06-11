@@ -1,17 +1,17 @@
+{% load static %}
 <!DOCTYPE html>
-
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="{% static 'food/css/style.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'food/css/bootstrap.css' %}">
     <title>Document</title>
 </head>
 <body>
-    <h3>
+  
     {%for item in items_%}
-      {{item.id}} <a href="{{ item.id }}">{{item.item_name}}</a> <br>
+      {{item.id}} <a id="as" href="{% url 'food:detail' item.id %}">{{item.item_name}}</a> <br>
     {%endfor%}
-    </h3>
+    
+    
 </body>
+<script src="{% static 'food/js/bootstrap.js' %}"></script>
 </html>
